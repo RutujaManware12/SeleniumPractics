@@ -37,14 +37,20 @@ public class TypesofXpath {
 	
 	//driver.findElement(By.xpath("//input[@name='search' and @placeholder='Search']")).sendKeys("Tshirt");
 		
-	driver.findElement(By.xpath("//input[@name='search' or @placeholder='abc']")).sendKeys("Tshirt");
+	//driver.findElement(By.xpath("//input[@name='search' or @placeholder='abc']")).sendKeys("Tshirt");
 
+	
+	
+// Xpath with text() - inner text
+	
+	//driver.findElement(By.xpath("//*[text()='MacBook']")).click();
 		
 		
+    boolean displaystatus=driver.findElement(By.xpath("//h3[text()='Featured']")).isDisplayed();
+    System.out.println(displaystatus);
 		
-		
-		
-		
+    String value=driver.findElement(By.xpath("//h3[text()='Featured']")).getText();
+    System.out.println(value);	
 		
 		
 
