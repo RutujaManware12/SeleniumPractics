@@ -41,12 +41,12 @@ public class Handleframes {
 		
 		//inner iframe - part of frame 3
 		
-		driver.switchTo().frame(0); //Switching  to frame using index
+		/*driver.switchTo().frame(0); //Switching  to frame using index
 		
 		driver.findElement(By.xpath("//*[@id='i9']//div[@class='AB7Lab Id5V1']")).click();
 		driver.switchTo().defaultContent(); //go back to page
 		
-		
+		*/
 	
 		
 		
