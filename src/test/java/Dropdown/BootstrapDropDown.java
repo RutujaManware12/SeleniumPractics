@@ -20,23 +20,51 @@ public class BootstrapDropDown {
 		
 		driver.findElement(By.xpath("//button[contains(@class,'multiselect')]")).click(); //opens dropdown options
 		
-		//1) Select single option
+	//1) Select single option
 		//driver.findElement(By.xpath("//input[@value='csharp']")).click();
 		
-		//2) Capture all the options and find out size
+	//2) Capture all the options and find out size
 		
 		List<WebElement> options=driver.findElements(By.xpath("//ul[contains(@class,'multiselect')]//label"));
 		System.out.println("Number of options:"+options.size()); //14
 		
-		//3) Printing options from dropdown
-		
+	//3) Printing options from dropdown
+		/*
 		for(WebElement op:options)
 		
 		{
 			System.out.println(op.getText());
 		}
+		*/
+
+	//4) select multiple options
 		
-
+		for(WebElement op:options)
+		{
+			String option=op.getText();
+			if(option.equals("Java")||option.equals("Python")||option.equals("MySQL"))
+				{
+				  op.click();
+				}
+		}
+		
+		
 	}
-
 }
+
+		
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+
+
